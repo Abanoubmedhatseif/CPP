@@ -9,6 +9,10 @@ class Complex {
     int real;
     int imagine;
 public:
+    Complex (int real=0 , int imagine=0){
+        this->real = real ;
+        this->imagine = imagine ;
+    }
     void setReal(int _Real){
         real = _Real;
     }
@@ -75,9 +79,6 @@ Complex Addout (Complex c , Complex z){
  }
 
  Complex subFriend (Complex x,Complex z){
-        Complex c_add ;
-        c_add.setReal(x.getReal()-z.getReal());
-        c_add.setImage(x.getImagine()-z.getImagine());
-        return c_add;
+        Complex c (x.real-z.real,x.imagine-z.imagine);
+        return c;
  }
-
